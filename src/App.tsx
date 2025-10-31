@@ -5,12 +5,14 @@ import Navbar from "./components/layout/Navbar/Navbar";
 
 export default function App(){
   return(
-    <div className="flex flex-col items-center">
+    <main className="flex flex-col items-center">
+      <header className="fixed">
       <Navbar />
+      </header>
       <Dashboard />
       <Routes>
         <Route path="/all-project" element={<AllProject />} />    
       </Routes>
-    </div>
+    </main>
   );
 }
