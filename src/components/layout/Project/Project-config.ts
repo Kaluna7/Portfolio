@@ -1,6 +1,24 @@
 export const projectData = [
     {
-        icon : "/assets/css.png",
+        icon : "/assets/Todo.png",
+        title : "tesing",
+        description : "hsjaso",
+        technology : ["React", "node"]
+    },
+    {
+        icon : "/assets/Todo.png",
+        title : "tesing",
+        description : "hsjaso",
+        technology : ["React", "node"]
+    },
+    {
+        icon : "/assets/Todo.png",
+        title : "tesing",
+        description : "hsjaso",
+        technology : ["React", "node"]
+    },
+    {
+        icon : "/assets/Todo.png",
         title : "tesing",
         description : "hsjaso",
         technology : ["React", "node"]
