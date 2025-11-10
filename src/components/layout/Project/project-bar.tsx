@@ -5,13 +5,15 @@ interface ProjectProps {
   title: string;
   description: string;
   technology: string[];
+  to: string;
 }
 
-export function ProjectBar({ icon, title, description, technology }: ProjectProps) {
-  const navigation = useNavigate();
-  const hanldeViewAllProject = () => {
-    navigation("/todo-list");
-  };
+export function ProjectBar({ icon, title, description, technology, to }: ProjectProps) {
+
+  const navigate = useNavigate();
+  const handleViewProject = () => {
+    navigate(to)
+  }
 
   return (
     <div className="group bg-gradient-to-b from-white/5 to-white/3 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-white/10">
@@ -49,7 +51,7 @@ export function ProjectBar({ icon, title, description, technology }: ProjectProp
 
         {/* Action Button */}
         <div className="flex justify-end items-center pt-4 border-t border-white/10">
-          <button className="text-indigo-400 hover:text-indigo-300 font-medium text-sm flex items-center gap-1 group/btn transition-colors duration-300 cursor-pointer" onClick={hanldeViewAllProject} type="button">
+          <button className="text-indigo-400 hover:text-indigo-300 font-medium text-sm flex items-center gap-1 group/btn transition-colors duration-300 cursor-pointer" onClick={handleViewProject} type="button">
             View Details
             <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

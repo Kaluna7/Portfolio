@@ -19,7 +19,7 @@ export default function About() {
 
       const cardAnimation = gsap.to(cardRef.current, {
         rotationY: 180,
-        y: 100,
+        y: 30,
         ease: "power2.inOut",
         scrollTrigger: {
           trigger: triggerRef.current,
@@ -67,7 +67,6 @@ export default function About() {
   return (
     <main id="about" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-800 text-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-[2px] mb-8">
             <div className="bg-gray-900/95 rounded-2xl px-8 py-6">
@@ -78,9 +77,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Content */}
         <div ref={contentRef} className="flex flex-col gap-20 lg:gap-32">
-          {/* Background Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="background-text flex flex-col gap-8 order-2 lg:order-1">
               <h1 className="font-bold text-4xl lg:text-5xl bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">
@@ -110,7 +107,7 @@ export default function About() {
                   ref={cardRef}
                   className="relative w-full h-full [transform-style:preserve-3d] rounded-2xl shadow-2xl border border-white/10"
                 >
-                  {/* Front of card */}
+{/* front-picture */}
                   <div className="absolute inset-0 [backface-visibility:hidden] rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
                     <img
                       src="/assets/back-card.jpg"
@@ -119,18 +116,14 @@ export default function About() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
                       <div className="text-center p-8">
-                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                          </svg>
+                        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 text-6xl p-6">
+                        ?
                         </div>
-                        <h3 className="text-white text-xl font-bold mb-2">My Journey</h3>
-                        <p className="text-white/80">Scroll to discover more</p>
+                        <p>Scroll If You Want To Know More</p>
                       </div>
                     </div>
                   </div>
-
-                  {/* Back of card */}
+{/* back-picture */}
                   <div className="absolute inset-0 [transform:rotateY(180deg)] [backface-visibility:hidden] rounded-2xl overflow-hidden">
                     <img
                       src="/assets/foto.jpg"
@@ -149,7 +142,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Who I Am Section */}
+{/* Who I Am Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="whoami-text flex flex-col gap-8">
               <h1 className="font-bold text-4xl lg:text-5xl bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">

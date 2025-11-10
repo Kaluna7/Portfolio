@@ -1,7 +1,14 @@
 import { ProjectBar } from "./project-bar";
 import { projectData } from "./Project-config";
+import { useNavigate } from "react-router-dom";
 
 export default function Project() {
+
+  const navigate = useNavigate();
+  const handleViewAllProject = () =>{
+    navigate("/all-project")
+  }
+
   return (
     <main className="h-fit py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -27,7 +34,7 @@ export default function Project() {
 
         <div className="text-center mt-20">
           <p className="text-gray-400 mb-8">Want to see more of my work?</p>
-          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl border border-white/10">
+          <button className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-indigo-500 hover:to-purple-500 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl border border-white/10" onClick={handleViewAllProject} type="button">
             View All Projects
           </button>
         </div>

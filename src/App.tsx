@@ -14,6 +14,7 @@ export default function App(){
         <Route path="/" element={<Dashboard />} />
         <Route path="/all-project" element={<AllProject />} />
         <Route path="/todo-list" element={<TodoList />} />
+        <Route path="/all-project" element={<AllProject />} />
       </Routes>
     </main>
   );
